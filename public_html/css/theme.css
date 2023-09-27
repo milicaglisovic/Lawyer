@@ -9672,7 +9672,7 @@ header .navbar-nav a {
   padding: 77px 0 80px;
 }
 
-.service-section h2 {
+.service-section back h2 {
   margin-bottom: 4.5rem;
 }
 
@@ -9682,6 +9682,27 @@ header .navbar-nav a {
 
 .service-section .service-item span {
   color: #1E1E1E;
+}
+
+.service-section.dark-service-section {
+  background-color: #112848;
+}
+
+.service-section.dark-service-section h2 {
+  color: #1A77CD;
+}
+
+.service-section.dark-service-section .read-more {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.service-section.dark-service-section .service-item-description {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  height: 7.5rem;
+  overflow: hidden;
 }
 
 .team-section {
