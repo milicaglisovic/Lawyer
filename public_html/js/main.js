@@ -48,11 +48,43 @@ $(document).ready(function(){
            }
        }); 
     }
-    
-
-    
-    
-    
-    
+//form validator
+    if($('.contact-form').length>0){
+        $('.contact-form').validate({
+            highlight:function(element){
+                $(element).addClass('is-invalid').removeClass('is-valid');
+            },
+            unhighlight:function(element){
+                $(element).addClass('is-ivalid').removeClass('is-invalid');
+            },
+            rules:{
+                name:{
+                    required:true
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                message:{
+                    required:true
+                }
+            },
+            messages:{
+                name:{
+                    required:'The Name and Surname field is required.'
+                },
+                email:{
+                    required:'The Email field is required.'
+                },
+                message:{
+                    required:'The Message field is required'
+                }
+            },
+            errorElement:'p',
+            errorPlacement:function(error,element){
+                error.appendTo(element.closest(".form-group").find(".error-msg"));
+            }
+        });
+    }
 });
 
